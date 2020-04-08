@@ -51,3 +51,5 @@ Like
 If the admin clicks on any name it will open new web page giving detailed information of student
 The detailed information includes – Name, contact details, grades, college, region, photo, skills, branch
 
+## Approach 1
+![Image description](readme_img/approach1.jpg)
