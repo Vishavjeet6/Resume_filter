@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Welcome Admin</h2>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control"  placeholder="Search here" aria-label="Search here" aria-describedby="button-addon2"
+        [(ngModel)]="search.description"
+        >
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="doSearch()">Button</button>
+        </div>
+    </div>
+    <div class="div" *ngIf="results.length > 0" >
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let result of results;" (click)="openPdf(result.id)">
+            <th scope="row">{{result.id}}</th>
+            <td>{{result.name}}</td>
+            <td>{{result.description.slice(0,100)}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
